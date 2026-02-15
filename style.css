@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(254, 253, 249);
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover{
+    color: #2650da;
+}
+
+.btn{
+    background-color: black;
+    height: 40px;
+    width:150px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color:#00d6a8;
+    color: black;
+}
+
+/* HERO SECTION */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.model{
+    background-image: url(model1.avif);
+    background-size: cover;
+    background-position: center;
+    height:500px;
+    width: 400px;
+}
+
+.hero-text{
+    max-width: 500px;
+}
+
+.hero-text h1{
+   font-size: 45px;
+   margin-bottom: 20px;
+}
+
+.hero-text p{
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* SCROLLING BAR */
+.textmove{
+    width: 100%;
+    overflow: hidden;
+    background: #ddff50;
+    padding: 20px 0;
+}
+
+.move{
+  white-space: nowrap;
+  font-weight: bold;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText{
+    0%{ transform: translateX(100%); }
+    100%{ transform: translateX(-100%); }
+}
+
+/* PRODUCTS */
+.products{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 5%;
+    flex-wrap: wrap;
+}
+
+.product{
+    width: 260px;
+    text-align: center;
+}
+
+.product-img{
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.buy-btn{
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-btn:hover{
+    background:#00d6a8;
+    color:black;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .model{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero-text h1{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px){
+    nav{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-between;
+    }
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+
+    .product{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
